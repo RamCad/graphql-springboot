@@ -1,0 +1,18 @@
+type Query {
+    readQuery : String
+    fullName(firstName: String, lastName: String) : String
+    fullNameWithModel(request: SampleRequest): String
+    customer(id: Long): Customer
+}
+
+type Customer {
+    id: Long
+    firstName: String
+    lastName: String
+    email: String
+}
+
+input SampleRequest {
+    firstName: String!
+    lastName: String
+}
